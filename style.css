@@ -6,6 +6,7 @@
     font-weight: 500;
     font-style: normal;
     color: var(--dark-blue);
+    transition: all .3s ease;
 }
 
 :root {
@@ -37,6 +38,11 @@ body {
 
 .register-container > h2, p {
     color: var(--accent);
+}
+
+.register-container > h2 {
+    font-size: 2rem;
+    font-weight: bolder;
 }
 
 .contents {
@@ -72,36 +78,72 @@ body {
     border: none;
     width: 65%;
     height: 30px;
-    font-size: 1rem;
+    font-size: 2rem;
     background-color: white;
 }
 
 label {
-    font-size: 1rem;
-    color: var(--dark-blue)
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+label::after{
+    content: ":";
+    font-size: large;
+    font-weight: 900;
+    width: 10px;
 }
 
 .quantidade {
-    width: 30%;
-    height: 10%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    padding: 1%;
-    border-radius: 5px;
+    width: 84%;
+}
+
+.contador{
+    padding: 3px;
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
     background-color: var(--light);
 }
 
-.quantidade > h2 {
-    font-size: 1rem;
-    font-weight: 800;
+.contador > h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0 ;
+    margin: 0;
 }
 
 
-.quantidade > p {
+.contador > p {
     font-size: 2rem;
     color: black;
+}
+
+.quantidade>button {
+    width: 50%;
+    height: 70%;
+    outline: none;
+    border: none;
+    background-color: var(--accent);
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.quantidade>button:hover {
+    scale: 1.05;
+}
+
+.quantidade>button:active {
+    scale: .9;
 }
 
 .right-wrapper {
@@ -120,7 +162,72 @@ label {
     height: 70%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 2%;
     border-radius: 5px;
     overflow-y: scroll;
+    gap: 20px;
+}
+
+.slider-item {
+    width: 95%;
+    height: 60px;
+}
+
+.slider-container > .inputs {
+    border: 1px solid var(--dark-blue);
+    width: 90%;
+}
+
+.slider-container>.inputs > label{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.slider-item > button {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--accent);
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.slider-item>button:hover {
+    scale: 1.05;
+}
+
+.slider-item>button:active {
+    scale: .9;
+}
+
+.submit-container {
+    margin-top: 11%;
+    width: 105%;
+    height: 60px;
+}
+
+.submit-container>button {
+    width: 80%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--accent);
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.submit-container>button:hover {
+    scale: 1.05;
+}
+
+.submit-container>button:active {
+    scale: .9;
+}
+
+input:-webkit-autofill{
+   display: none; 
 }
